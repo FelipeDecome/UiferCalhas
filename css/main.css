@@ -1,0 +1,100 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Josefin+Slab');
+
+* {list-style: none; text-decoration: none!important; border: 0; margin: 0; padding: 0;}
+input:focus,
+input:active:focus{
+    outline:none;
+}
+
+/*html {
+    scroll-behavior: smooth;
+}*/
+
+img {max-width: 100%;}
+
+p, h1, h2, h3, h4, h5, a, li {font-family: 'Josefin Slab', serif;}
+li {font-size: 16px;}
+p {font-size: 18px;}
+h1 {font-size: 60px;}
+h2 {font-size: 60px; margin-top: -83px;}
+h3 {font-size: 25px;}
+h5 {font-size: 30px;}
+
+@media (min-width:993px) and (max-width:1199px){
+    .sectionTitle{font-size: 115px!important;}    
+    h2 {font-size: 50px; margin-top: -73px;}
+}
+@media (min-width:768px) and (max-width:992px){
+    .sectionTitle{font-size: 65px!important;}
+    h2{font-size: 30px; margin-top: -35px;}
+}
+@media (max-width:767px){
+    .sectionTitle{font-size: 50px!important;}
+    h2{font-size: 30px; margin-top: -25px;}
+}
+
+.greatYellow {color: #ffbb00; font-family: 'Great Vibes', cursive; font-weight: normal!important;}
+.greatRed {color: #F25F5C; font-family: 'Great Vibes', cursive; font-weight: normal!important;}
+.greatBlue {color: #247BA0; font-family: 'Great Vibes', cursive; font-weight: normal!important;}
+.greatGreen {color: #70C1B3; font-family: 'Great Vibes', cursive; font-weight: normal!important;}
+.greatLetterSpacing {letter-spacing: 7px;}
+
+.josefinRed, .Red{color: #F25F5C!important;}
+.josefinBlue, .Blue{color: #247BA0!important;}
+.josefinGreen{color: #70C1B3!important;}
+.josefinYellow{color: #ffbb00!important;}
+
+.clarendon {font-family: Clarendon Blk Bt; font-weight: bolder;}
+
+section{clear: both; padding-top: 100px; padding-bottom: 100px;}
+.sectionHeader{text-align: center; position: relative; margin-bottom: 60px;}
+.sectionHeaderInverse .sectionTitle{color: #2f2f2f;}
+.sectionHeaderInverse h2{color: #fff;}
+.sectionTitle{font-size: 140px; color: #f0efef; margin: 0;}
+
+.btnNew {font-size: 18px;border-radius: 2px; padding: 9px 25px; animation-duration: 1s; margin-bottom: 20px; font-family: 'Josefin Slab', serif; font-weight: bolder; transition: all ease-out 200ms;}
+.btnNew a{color: #333!important; text-decoration: none; font-family: 'Josefin Slab', serif; font-weight: bolder;}
+.btnYellow:hover, .btnYellow:focus {background: transparent; border:1px solid #ffbb00!important; color: #ffbb00;}
+.btnRed:hover, .btnRed:focus {background: transparent; border:1px solid #F25F5C!important; color: #F25F5C;}
+.btnBlue:hover, .btnBlue:focus {background: transparent; border:1px solid #247BA0!important; color: #247BA0;}
+.btnGreen:hover, .btnGreen:focus {background: transparent; border:1px solid #70C1B3!important; color: #70C1B3;}
+.btnYellow:hover a, .btnYellow:focus a {color: #ffbb00!important;} 
+.btnRed:hover a, .btnRed:focus a {color: #F25F5C!important;} 
+.btnBlue:hover a, .btnBlue:focus a {color: #247BA0!important;} 
+.btnGreen:hover a, .btnGreen:focus a {color: #70C1B3!important;} 
+
+.btnYellow {background: #ffbb00; animation-name: btnEffectYellow;}
+.btnRed {background: #F25F5C; animation-name: btnEffectRed;}
+.btnRed a, .btnBlue a{color: #fff!important;}
+.btnRed, .btnBlue {color: #fff;}
+.btnBlue {background: #247BA0; animation-name: btnEffectBlue;}
+.btnGreen {background: #70C1B3; animation-name: btnEffectGreen;}
+
+@keyframes btnEffectYellow{
+    0%{background:transparent; margin-top:50px;}
+    0.02%{background:#fff;}
+    10%{margin-top:40px;}
+    100%{background:#ffbb00; margin-top:0px;}
+}
+
+@keyframes btnEffectRed{
+    0%{background:transparent; margin-top:50px;}
+    0.02%{background:#fff;}
+    10%{margin-top:40px;}
+    100%{background:#F25F5C; margin-top:0px;}
+}
+
+@keyframes btnEffectBlue{
+    0%{background:transparent; margin-top:50px;}
+    0.02%{background:#fff;}
+    10%{margin-top:40px;}
+    100%{background:#247BA0; margin-top:0px;}
+}
+
+@keyframes btnEffectGreen{
+    0%{background:transparent; margin-top:50px;}
+    0.02%{background:#fff;}
+    10%{margin-top:40px;}
+    100%{background:#70C1B3; margin-top:0px;}
+}

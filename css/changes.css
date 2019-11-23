@@ -1,0 +1,40 @@
+/* Cores 
+ * f15156-Vermelho
+ * 5898CC-Azul
+ * F2F85A-Amarelo
+ * #80E79D-Verde
+ */
+
+
+.navbarChanges {background-color: transparent; border: none;
+                background-image: url(../imagens/background.jpg);
+                background-repeat: no-repeat;
+                -moz-background-size: 100% 100%;
+                -webkit-background-size: 100% 100%;
+                background-size: 100% 100%;
+}
+
+.navbarContent {bottom: 10px; padding: 0; /*background: rgba(37,37,37,0.4)*/}
+.menuListChanges {margin-right:10px;}
+
+.menuListChanges li a {color: #eee!important; font-size: 16px; font-weight: bolder;}
+.menuListChanges li:hover {background-color: rgba(255, 255, 255, 0.8); border-radius: 0 0 3px 3px;
+                           -moz-box-shadow: 0 1px 3px #555;
+                           -webkit-box-shadow: 0 1px 3px #555;
+                           -o-box-shadow: 0 1px 3px #555 ;}
+
+.menuListChanges li:hover a {color: #5898CC!important;}
+
+.brandChanges {color: #F2F85A!important; font-size: 24px; font-weight: bolder; margin-left: 0px!important;}
+.brandChanges:hover {color: #eee!important;}
+
+.buttonNav {right: 3%!important;}
+
+.homeHeader h1 .slogan {color: #eee; }
+
+@media (max-width:767px){
+    /*Centraliza o menu MOBILE*/
+    .menuListChanges {float: none!important; text-align: center; margin: 0 auto;}
+    
+    .brandChanges {margin-left: 20px!important;}
+}

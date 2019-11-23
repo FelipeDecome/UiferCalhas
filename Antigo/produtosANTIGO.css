@@ -1,0 +1,48 @@
+.sideBar {position:fixed; padding: 0px 0; margin-left: -15px; height: 100vh; background: #1f1f1f; width: 250px; font-family: 'Josefin Slab', serif;}
+.sideBar .nav {padding: 0px 0px 20px 0;}
+.headerSidebar {font-weight: bolder; font-size: 16px;}
+.headerSidebar a:hover{color: #1f1f1f!important;}
+.headerSidebar a i{color: #ccc;}
+.headerSidebar a:hover i, .headerSidebar a:focus i{color: #1f1f1f;}
+.toggleSideBar {position: fixed; left: 200px; background: #ffbb00; padding: 15px 25px 15px 20px; border-radius: 0 10px 10px 0; cursor: pointer;}
+.toggleSideBar i {font-size: 25px; color: #1f1f1f;}
+.toggleSideBar:hover {background: #1f1f1f;}
+.toggleSideBar:hover i {color: #fff;}
+.headerSidebarTitle {font-size: 20px;color: #1f1f1f; background: #ffbb00; padding: 13.5px 0 13.5px 15px; font-weight: bolder;}
+
+.subNavSideBar li a {font-weight: normal; color: #fff;}
+.subNavSideBar li a:hover i {color: #fff;}
+.yellow li a:hover, .yellow li a:focus {color: #ffbb00!important;}
+.green li a:hover, .yellow li a:focus {color: #70C1B3!important;}
+
+.headerSidebar a.josefinYellow:hover, .headerSidebar a.josefinYellow:focus {background: #ffbb00;} /*255, 187, 00*/
+.headerSidebar a.josefinRed:hover, .headerSidebar a.josefinRed:focus {background: #F25F5C;} /*295, 95, 92*/
+.headerSidebar a.josefinBlue:hover, .headerSidebar a.josefinBlue:focus {background: #247BA0;} /*36 , 123, 160*/
+.headerSidebar a.josefinGreen:hover, .headerSidebar a.josefinGreen:focus {background: #70C1B3;} /*112, 193, 179*/
+
+.headerSidebar a i.iconToggle {display:none;}
+.headerSidebar a:hover i.iconToggle {display: block;}
+
+.toggleNoEffect:hover {animation-name: toggleSideBarEffect; animation-duration: 500ms;}
+.toggleEffect {animation-name: onToggleButton; animation-duration: 500ms; left: 0; background: #1f1f1f;}
+.toggleEffect:hover {background: #ffbb00;}
+.toggleEffect i {color: #fff;}
+.toggleEffect:hover i {color: #1f1f1f;}
+
+/*.mainContainer {margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px;}*/
+
+@keyframes toggleSideBarEffect {
+    0% {left:200px}
+    10% {left:195px}
+    50% {left:205px}
+    100% {left:200px}
+}
+
+@keyframes onToggleButton{
+    0% {left:200px;}
+    100% {left:0px;}
+}
+
+/*FIM ESTILIZAÇÃO DO MENU*/
+
+.mainContainer {margin-left: 250px; height: 500px;}

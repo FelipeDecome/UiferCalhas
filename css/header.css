@@ -1,0 +1,152 @@
+/*font-family: 'Montserrat Subrayada', sans-serif;/font-family: 'Italianno', cursive;/font-family: 'Josefin Slab', serif;*/
+
+.headerTop {position: fixed; width: 100%; display: inline-block; z-index: 1; padding: 40px 0 10px; animation-name: hideAnimation; animation-duration:500ms;}
+.headerScroll{background: #111; padding: 0!important; animation-name: showAnimation; animation-duration: 800ms;}
+
+@keyframes showAnimation {
+    0% {top:-120px; background:transparent;}
+    50% { background:#888;}
+    100% {top:0; background:#111;}
+}
+@keyframes hideAnimation {
+    0% {top:-40px; background:#111;}
+    50% { background:rgba(37,37,37,0.5);}
+    100% {top:0; background:transparent;}
+}
+
+/*Logo*/
+.logoContainer {width: 39%; margin: 12.5px 0 0 20px; float: left;}
+.logoContainer div {width: 100%; margin: 0 auto; text-align: left;}
+.logo span{font-size: 24px; transition: all 200ms ease-out; color: #fff;}
+.logo:hover .logoInitial1 {color: #F25F5C;}
+.logo:hover .logoInitial2 {color: #247BA0;}
+.logo:hover .FinalWords1, .logo:hover .FinalWords2 {color: #fff!important;}
+
+/*Menu Buttons*/
+.headerScroll .nav_buttons {border-left: 1px solid #555;}
+.nav_buttons { display: block; float: right; padding: 18.5px 16.5px; cursor: pointer;}
+.nav_buttons i, .nav_buttons span {color: #fff; font-size: 1.6em; transition: all 300ms ease-out;}
+.searchButton.Close i {transform: rotate(-270deg); color: #ffbb00;}
+.nav_buttons:hover i, .nav_buttons:hover span {color: #ffbb00;}
+.menuButton {float: right; padding: 7.5px 16.5px; cursor: pointer;}
+.menuButton ul li {width: 30px; height: 3px; background: #eee; margin: 8px 0; border-radius: 2px; transition: all 400ms ease-out;}
+.menuButton.Close ul li {background: #ffbb00;}
+.menuButton ul li:nth-child(2){width: 26px; height: 2px; margin: 0 auto;}
+.menuButton.Close ul li:nth-child(2){display: none;}
+.menuButton.Close ul li:first-child{transform: rotate(45deg); margin-top: 19px;}
+.menuButton.Close ul li:last-child{transform: rotate(-45deg); margin-top: -11px; margin-bottom: 18px;}
+.menuButton:hover ul li{background: #ffbb00;}
+.user_button.Close i {color: #ffbb00;}
+
+/*Menu style*/
+.headerScroll .menuColapse.Show, .headerScroll .userMenuColapse.Show {background: #111;}
+.menuItens {padding: 0; margin-top: -0px; transition: none!important; margin-bottom: 0;}
+.menuItens a li {color: #fff; font-size: 18px; font-weight: bolder;padding: 15px 0; transition: color 100ms ease-out;}
+
+/*Grey Content on Menu opening*/
+html.active:after { content: ""; display: block; position: fixed; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0,0,0,0.8);}
+
+/*Search Box*/
+.searchContent {display:none; padding: 12.5px 0; width: 100%;}
+.headerScroll .searchContent.Show {background: #111;}
+.searchContent.Show {display:block; margin-top: 55px; animation-name: searchShow; animation-duration: 600ms;}
+.searchContent div {text-align: center;}
+.searchContent div input {width: 70%; height: 30px; border-radius: 5px; border: 1px solid #fff; text-indent: 1em; font-size: 1em; transition:all ease-out 200ms;}
+.searchContent div input:focus { border: 2px solid #ffbb00;}
+::-webkit-input-placeholder {color: #777;}
+.searchContent div input:focus::-webkit-input-placeholder {color: #bbb;}
+.searchContent div i {margin:0 0 0 -30px; color: #000; cursor: pointer;}
+.searchContent div i:hover, .searchContent div i:focus {color: #ffbb00;}
+
+/*Cart Button*/
+.cart_items {font-size: 1em!important;}
+.cart_button {padding: 18.5px 11px!important;}
+.cart_button {display: none;}
+
+/*User Button & Menu*/ 
+.user_button {display: none;} 
+.userMenuColapse {display: none;}
+
+/*Search Bar*/
+.searchButton {display: none;}
+.searchContent {display: none!important;}
+
+@keyframes searchShow{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+/*Only Bigger Devices*/
+@media (min-width:1199px) {
+    
+    .logoContainer {width: 14%!important;}
+    
+    .menuContainer {width: 58%!important;}
+    
+    .searchContent {display: block; float: left; padding: 12px 0 0; margin: 0 auto; width: 25%; margin-top: 0!important;}
+    .searchContent.Show {background: transparent;}
+    /*.searchContent div {text-align: right;}  Inutilizada*/
+    .searchContent div input {width: 80%!important;}
+    .searchButton {display: none;}
+    
+}
+
+/*Only Desktop and Bigger devices*/
+@media (min-width:992px){
+    
+    .logoContainer {width: 20%;}
+    
+/*  .searchContent {width: 22%!important;}
+    .searchContent div {text-align: initial!important;}  Inutilizada*/
+    .searchContent div input {width: 40%;}
+
+    .menuButton {display: none;}
+    .menuColapse {}    
+    .menuContainer {width: 76%; margin: 0px auto; float: right;}
+    .menuItens {transition: all 1s ease-out;}
+    .menuItens a {float: left; padding: 18px 12px;}
+    .menuItens a li { padding: 0;}
+    .menuItens a:hover {border-bottom: 3px solid #ffbb00; padding: 18px 12px 15px;}
+    .menuItens a:hover li {color: #ffbb00;}
+    
+    .headerScroll .userMenuColapse {border-radius: 0 0 10px 10px!important; margin-top: 22px;}
+    .userMenuColapse.Show { right: 0.5%;}
+    .userMenuColapse {position: fixed; margin-top: 30px; background-color: #111; border-radius: 10px; right: -50%; transition:right ease-out 100ms;}
+    .userMenuColapse .menuItens {margin-bottom: 0!important;}
+    .userMenuColapse .menuItens a {float: none; border: 0; padding: 0!important;}
+    .userMenuColapse .menuItens a li {padding: 10px 50px!important;}
+    .userMenuColapse .menuItens a li:hover {background: #ffbb00; color: #000;}
+}
+
+@media (max-width:991px){
+
+    .menuColapse, .userMenuColapse { position:fixed; right: -100%; transition: all 500ms ease-out; margin-top: 55px; float: right; height: 100vh; width: 60%; text-align: center; z-index: 1;}
+    .userMenuColapse {margin-top: 17px!important;}
+    .menuColapse.Show, .userMenuColapse.Show { right: 0;}
+    .menuItens a li:hover {background: #ffbb00; color: #000;}
+
+}
+
+/*700px Up*/
+@media (min-width:718px) and (max-width:991px) {
+
+    .logoContainer {width: 24%; margin: 10px 0 0 10px;}
+    .logoContainer div {text-align: center;}
+
+    .searchContent {display: block; float: left; padding: 12px 0 0; margin: 0 auto; width: 40%; margin-top: 0!important;}
+    .searchContent.Show {background: transparent;}
+    .searchContent div {text-align: right;}
+    .searchContent div input {width: 80%;}
+    .searchButton {display: none;}
+
+}
+
+@media (max-width:717px){
+    .menuColapse, .userMenuColapse {width: 100%!important;}
+}
+
+/*450Xpx Down*/
+@media (max-width:450px) {
+    .logoContainer {width: 20%;}
+    .logo .FinalWords1, .logo .FinalWords2 {display: none;}
+}

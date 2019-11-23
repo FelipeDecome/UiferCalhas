@@ -1,0 +1,7 @@
+.backHome {background: url('../imagens/Montagem.jpg') no-repeat center center / cover;}
+.homeContent {display: table-cell; height: 100vh; padding: 180px 0 80px; vertical-align: middle; width: 1%;}
+.homeContentText {color:#fff; display: block; text-align: center;}
+.homeContentText h3{margin-top: 30px;}
+.homeSlogan {color: #bbb; margin-top: -20px;}
+.nameEmpresa {font-size: 72px;}
+.btnSaiba {margin: 80px 0;}

@@ -1,0 +1,23 @@
+.sobreText p {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.sobreWidgets p {    
+    margin: 10px 0 0;
+    text-align: justify; 
+}
+
+@media (min-width:992px){
+    .sobreWidgets p.nd, .sobreWidgets p.rd {
+        border-left: 1px solid #ddd;
+        padding: 0 0 0 30px;
+    }
+}
+.widgetTitle {
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+

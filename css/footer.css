@@ -1,0 +1,33 @@
+.footer {background-color: #1f1f1f; clear: both; padding-top: 50px; padding-bottom: 0px;}
+.footerInfo {color: #ddd; text-align: center; overflow: hidden; display: block; padding: 20px 0 0;}
+.footerInfo p {margin-top: 10px;}
+.footerInfo a>i {margin: 50px 0 50px; top: 3px; left: 1px;}
+.icon {color: #fff; border: 3px solid #fff; padding: 15px; border-radius: 30px; font-size: 20px;}
+.icon:hover {color: #ffbb00; border-color: #ffbb00;}
+.copyright {bottom: 0; font-size: 16px;}
+.footerInfo ul {padding: 0!important;}
+.iconFooter {list-style: none;}
+.iconFooter i {color: #fff;font-size: 32px;margin: 5px 0 10px;}
+.iconFooter i:hover {color: #ffbb00;}
+.funcionamento {border: 1px solid #fff; padding: 20px; margin:0 auto;}
+.footerH4 {font-weight: bolder; font-size: 20px;}
+
+@media (min-width:768px){
+    .funcionamento {width: 60%;}
+}
+
+@media (min-width:992px){
+    .footerInfo a img {width: 20%!important;}
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .footerInfo a img {width: 30%!important;}
+}
+
+@media (min-width:480px) and (max-width:767px) {
+    .footerInfo a img {width: 40%!important;}
+}
+
+@media (max-width:479px){
+    .footerInfo a img {width: 60%!important;}
+}

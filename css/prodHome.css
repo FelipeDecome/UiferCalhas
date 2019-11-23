@@ -1,0 +1,14 @@
+.prodHomeContent {display: table-cell; height: 100vh; padding: 180px 0 80px; vertical-align: middle; width: 1%;}
+.prodHomeContent div.backContent {width: 80%; margin: 0 auto; text-align: center; padding: 40px 60px;} /* background: radial-gradient(rgba(0,0,0,0.7) 30%, rgba(237,237,237,0.3)); */
+.catTitle, .catDesc {color: #fff;}
+.catDesc {text-align: justify; margin: 40px 0;}
+.catTitle span {color: #F25F5C;}
+.prodHomeContent .btnMais {margin: 0 auto;}
+
+@media (min-width: 1200px){
+    .prodHomeContent div.backContent {width: 60%;}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .prodHomeContent div.backContent {width: 70%;}
+}

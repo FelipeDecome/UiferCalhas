@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.inputFile {display: none!important;}
+.selectFile {
+    border: 2px solid #ddd;
+    height: 50px;
+    padding: 9px 11px!important;
+    font-weight: bolder;
+/*    font-family: 'Lora', trebuchet ms;*/
+    background: #fff!important;
+    color: #555;
+    font-size: 25px;
+    border-radius: 20px;
+}
+.selectFile:hover, .selectFile:focus {
+    color: #FFBA00;
+    border: 2px solid;
+    border-color: #FFBA00;
+}
+
+.helpBlockFile {
+    border: 1px solid #ddd;
+    padding: 3px 0px;
+    height: 30px;
+    border-radius: 3px;
+    width: 100%!important;
+    background: transparent;
+}
+
+textarea:focus, input:focus, select:focus {
+    outline: 0;
+}
+
+.inputContato {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    height: 40px;
+    padding-left: 15px;
+    font-family: 'Lora', trebuchet ms;
+    color: #555;
+}
+
+.textAreaContato {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding-left: 15px;
+    font-family: 'Lora', trebuchet ms;
+    resize: none;
+    color: #555;
+}
+
+label {font-family: 'Lora', trebuchet ms; color: #333;}
+.helpBlockEdit {color: #aaa;}
+
+.btnContato {
+    border: 1px solid #ddd;
+    background-color: transparent;
+    height: 40px;
+    width: 200px;
+    color: #333;
+    font-family: 'Lora', trebuchet ms;
+    font-weight: bolder;
+    border-radius: 3px!important;
+}
+
+.btnContato:hover {
+    color:#FFBA00;
+    border-color: #FFBA00;
+} 
+
+.form-group {
+    margin-bottom: 5px!important;
+}
+
+.helpBlockEdit {
+    margin-top: 0!important;
+}
+.uploadCamp{
+    margin-bottom: 15px!important;
+}

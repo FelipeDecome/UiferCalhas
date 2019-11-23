@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>http://www.uifercalhas.com.br/</loc>
+
+      <lastmod>2017-03-09</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.9</priority>
+
+   </url>
+   
+   <url>
+
+      <loc>http://www.uifercalhas.com.br/index.php#home</loc>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   
+   <url>
+
+      <loc>http://www.uifercalhas.com.br/index.php#sobre</loc>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   
+   <url>
+
+      <loc>http://www.uifercalhas.com.br/index.php#serviços</loc>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   
+   <url>
+
+      <loc>http://www.uifercalhas.com.br/index.php#portfolio</loc>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   
+   <url>
+
+      <loc>http://www.uifercalhas.com.br/index.php#parceiros</loc>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+   
+   <url>
+
+      <loc>http://www.uifercalhas.com.br/index.php#contato</loc>
+
+      <changefreq>monthly</changefreq>
+
+   </url>
+
+</urlset> 

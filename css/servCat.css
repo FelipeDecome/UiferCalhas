@@ -1,0 +1,29 @@
+.servCat {
+    border-left: 3px solid;
+    padding-left: 20px;
+    margin-bottom: 60px;
+    min-height: 170px;
+}
+
+@media (min-width:992px){
+    .servCat h5 {text-align: center;}
+}
+
+@media (max-width:991px){
+    .servCat h5 {margin-left: 20px;}
+}
+.servCat.artesanato{
+    border-color: #F25F5C;
+}
+
+.servCat.calhas, .servCat.telhas, .servCat.venezianas{
+    border-color: #FFBB00;
+}
+
+.servCat.funilaria{
+    border-color: #247BA0;
+}
+
+.servCat.instManu{
+    border-color: #70C1B3;
+}

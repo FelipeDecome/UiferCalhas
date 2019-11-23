@@ -1,0 +1,15 @@
+.prodContent {padding: 20px 10px 10px; margin: 15px 0 90px;}
+/*.prodContent.normal {background: rgba(237,237,237,0.4);}*/
+.prodContent:hover {box-shadow: 0 0 20px #F25F5C; margin: 15px 0 0!important;}
+.prodContent:hover .infoButton {display: block;}
+
+.prodInfo,.prodDesc {color: #333;}
+
+.prodImg {padding: 0 0 20px;}
+.prodInfo {text-align: center;}
+.prodInfo .name {font-size: 28px;}
+.prodInfo li {margin: 7px 0;}
+
+.prodDesc {text-align: justify; padding: 0 20px;}
+.infoButton {padding: 10px 0; display: none;}
+.btnInfo {animation-name: none!important;}

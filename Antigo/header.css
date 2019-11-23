@@ -1,0 +1,52 @@
+/*Navbar*/
+.headerTop{padding: 47px 0;}
+.logo{padding: 12px 0; z-index: 10;}
+
+/*Logo*/
+.logoContainer {width: 50%; margin: 10px 0 0 20px; float: left;}
+.logoContainer div {width: 100%; margin: 0 auto; text-align: left;}
+.logo a span{font-size: 24px; transition: all 200ms ease-out; color: #fff;}
+.logo:hover a span .logoInitial1 {color: #F25F5C;}
+.logo:hover a span .logoInitial2 {color: #247BA0;}
+.logo:hover a span .FinalWords1, .logo:hover a span .Finalwords2 {color: #fff!important;}
+
+.navbar.navbarHeader{width: 100%;border-radius: 0;position: absolute;}
+.navbarOnTop{animation-name: hideAnimation; animation-duration: 300ms;}
+.navbarOnScroll{position: fixed!important; top: 0;background-color: #000;z-index: 222;animation-name: showAnimation; animation-duration: 1s;}
+.navbarOnScroll .container .row .headerTop {padding: 0px 0;}
+.navbarNew{font-family: 'Josefin Slab', serif; font-size: 18px; background: transparent; border: none; margin: 0!important;}
+.navbarHeaderNew{padding: 12px 0;}
+.navbarToggleNew{border: 1px solid #fff!important; border-radius: 2px; padding: 10px;}
+.navbarToggleNew span{background-color: #fff!important;}
+.navbarToggleNew:hover, .navbarToggleNew:focus{border-color:#ffbb00!important; background: transparent!important;}
+.navbarToggleNew:hover span, .navbarToggleNew:focus span{background-color: #ffbb00!important;}
+.navbarNavNew li a {color: #fff!important; padding: 22px 15px!important;-webkit-transition: all 200ms;-moz-transition: all 200ms;-o-transition: all 200ms;}
+.navbarNavNew li a:hover, .navbarNavNew li a:focus {color: #ffbb00!important; background: transparent; border-color: #ffbb00;}
+.navbarNavNew .active a{background: transparent!important; color: #ffbb00!important; border-bottom: 3px solid #ffbb00!important; font-weight: bolder!important;}
+
+@media (min-width:992px) and (max-width:1199px){
+    .logo{ padding: 18px 0;}
+}
+
+@media (max-width:992px){
+    .headerTop{padding: 20px 0;}
+    .navbarNavNew{float: none!important; background-color: #000; border: 1px solid #555; border-radius: 5px;}
+    .in .navbarNavNew li a {padding: 10px 8px!important;text-align: center; border-bottom: 1px solid #555;}    
+    .navbarNavNew .active a {border-bottom: 1px solid!important;}
+}
+@media (max-width:767px) {
+    .headerTop{padding: 10px 0;}
+    .logo {padding: 14px 0;}
+    .logo a img{ width: 60%;}
+}
+
+@keyframes showAnimation {
+    0% {top:-120px; background:transparent;}
+    50% { background:#888;}
+    100% {top:0; background:#000;}
+}
+@keyframes hideAnimation {
+    0% {top:-40px; background:#000;}
+    50% { background:rgba(37,37,37,0.5);}
+    100% {top:0; background:transparent;}
+}

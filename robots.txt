@@ -1,0 +1,16 @@
+User-Agent: *
+Disallow:
+Disallow: /PHPMailer
+Disallow: /PHPMailer/
+Disallow: /clientesParceiros.php
+Disallow: /contato.php
+Disallow: /contatoSend.php
+Disallow: /footer.php
+Disallow: /header.php
+Disallow: /home.php
+Disallow: /portfolio.php
+Disallow: /servicos.php
+Disallow: /sobre.php
+Disallow: /ValidaDados.class.php
+Allow: /index.php
+Allow: /sitemap.xml
