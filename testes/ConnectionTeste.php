@@ -16,18 +16,15 @@ $fields = ['cat_name', 'cat_refcode'];
 //var_dump($field);
 
 $data = [
-    'cat_name' => 'Regadores',
+    'cat_name' => 'Teste',
     'cat_segmento' => 'Artesanato',
-    'cat_desc' => 'Regadores',
-    'cat_refcode' => '07'
+    'cat_desc' => 'Teste',
+    'cat_refcode' => '08'
 ];
 
 try {
 
-    //$conn = new Conn(Conf::DB_HOST, Conf::DB_USER, Conf::DB_PASS, Conf::DB_NAME);
-    //$conn->set_charset(Conf::DB_CHARSET);
-
-    $exec = Crud::Delete("categorias", "");
+    $exec = Crud::Select("categorias");
 
     var_dump($exec);
     
