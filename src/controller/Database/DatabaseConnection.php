@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace UiferCalhas\SrcClasses\controller\Database;
 
 use UiferCalhas\SrcClasses\classes\Exceptions\ConnectionException;

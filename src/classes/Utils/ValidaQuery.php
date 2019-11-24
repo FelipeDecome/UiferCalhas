@@ -1,33 +1,67 @@
 <?php
 
+declare(strict_types=1);
+
 namespace UiferCalhas\SrcClasses\classes\Utils;
+
+use UiferCalhas\SrcClasses\controller\Database\DatabaseConnection;
 
 class ValidaQuery
 {
 
-    public function static prepareFunction(): String 
+    public static function prepareData(array $data, int $prepareType, DatabaseConnection $conn)//: string
     {
-        switch ($this->function) {
-            case 'INSERT':
-                return "INSERT INTO {$this->table}{$this->data}";
-                break;
-            
-            case 'SELECT' :
-                return "SELECT {$this->fields} FROM {$this->table}{$this->params}";
-                break;
+        if ($prepareType === 1) {
 
-            case 'UPDATE' :
-                return "UPDATE {$this->table} SET {$this->data}{$this->Params}";
-                break;
+            foreach ($data as $field => $value) {
 
-            case 'DELETE' :
-                return "DELETE FROM {$this->table}{$this->params}";
-                break;
+                if (isset($fields) 
+                    && isset($value)) {
 
-            default:
-                throw new CrudException("Função requisitada não existe, ou não foi adcionada ao sistema. Contate o Desenvolvedor. Função requisitada: " . strtoupper($this-function), 20);
-                
-                break;
+                    $fields = $fields . ", " . $field;
+                    $values = $values . ", '" . $value . "'";
+
+                } else {
+
+                    $fields = $field;
+                    $values = "'" . $value . "'";
+
+                }
+
+            }
+
+            /*
+            Junta as 2 Váriaveis para serem usadas no comando SQL.
+             */
+            $prepareData = "({$fields}) VALUES ({$values})";
+            var_dump($values);
+
+            /*
+            Retorna a String pronta.
+             */
+            return $prepareData;            
+
+        } elseif ($prepareType === 2){
+
+            foreach ($data as $key => $value) {
+
+                if (isset($preparedData)) {
+
+                    $preparedData = $preparedData . ", {$key} = '{$value}'";
+
+                } else {
+
+                    $preparedData = "{$key} = '{$value}'";
+
+                }
+
+            }
+
+            /*
+            Retorna a String pronta.
+             */
+            return $preparedData;
+
         }
     }
 
