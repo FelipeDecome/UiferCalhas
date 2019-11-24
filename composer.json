@@ -1,0 +1,23 @@
+{
+    "name": "felipedecome/uifercalhas",
+    "description": "Site desenvolvido para Uifer Calhas",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Felipe Decome",
+            "email": "felipe.decome@hotmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    },
+    "autoload": {
+        "classmap": [
+
+        ],
+        "files": [],
+        "psr-4": {
+            "UiferCalhas\\SrcClasses\\": "src/"
+        }
+    }
+}
