@@ -17,9 +17,7 @@
         ],
         "files": [],
         "psr-4": {
-            "UiferCalhas\\SrcClasses\\": "src/",
-            "UiferCalhas\\Database\\" : "controller/Database/",
-            "UiferCalhas\\Exceptions\\" : "src/classes/Exceptions/"
+            "UiferCalhas\\SrcClasses\\": "src/"
         }
     }
 }

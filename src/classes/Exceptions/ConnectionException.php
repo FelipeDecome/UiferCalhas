@@ -1,8 +1,8 @@
 <?php
 
-namespace UiferCalhas\Exceptions;
+namespace UiferCalhas\SrcClasses\classes\Exceptions;
 
-class ConnectionException extends Exception
+class ConnectionException extends \Exception
 {
 
     public function __construct($message, $exceptionCod, $previousException = null)
