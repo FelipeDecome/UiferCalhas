@@ -9,22 +9,25 @@ use UiferCalhas\SrcClasses\controller\Database\DatabaseConnection;
 class ValidaQuery
 {
 
-    public static function prepareData(array $data, int $prepareType, DatabaseConnection $conn)//: string
+    public static function prepareData(array $data, int $prepareType, DatabaseConnection $conn): string
     {
         if ($prepareType === 1) {
 
             foreach ($data as $field => $value) {
 
+                $escField = $conn->real_escape_string($field);
+                $escValue = $conn->real_escape_string($value);
+
                 if (isset($fields) 
                     && isset($value)) {
 
-                    $fields = $fields . ", " . $field;
-                    $values = $values . ", '" . $value . "'";
+                    $fields = $fields . ", " . $escField;
+                    $values = $values . ", '" . $escValue . "'";
 
                 } else {
 
-                    $fields = $field;
-                    $values = "'" . $value . "'";
+                    $fields = $escField;
+                    $values = "'" . $escValue . "'";
 
                 }
 
@@ -43,15 +46,18 @@ class ValidaQuery
 
         } elseif ($prepareType === 2){
 
-            foreach ($data as $key => $value) {
+            foreach ($data as $field => $value) {
+
+                $escField = $conn->real_escape_string($field);
+                $escValue = $conn->real_escape_string($value);
 
                 if (isset($preparedData)) {
 
-                    $preparedData = $preparedData . ", {$key} = '{$value}'";
+                    $preparedData = $preparedData . ", {$escField} = '{$escValue}'";
 
                 } else {
 
-                    $preparedData = "{$key} = '{$value}'";
+                    $preparedData = "{$escField} = '{$escValue}'";
 
                 }
 
@@ -61,6 +67,45 @@ class ValidaQuery
             Retorna a String pronta.
              */
             return $preparedData;
+
+        }
+    }
+
+    public static function prepareParams(string $params = null, DatabaseConnection $conn)//: string
+    {
+
+        $preparedParams = ($params != null) ? $conn->real_escape_string(" WHERE {$params}") : null;
+
+        return $preparedParams;
+
+    }
+
+    public static function prepareFields($fields = '*', DatabaseConnection $conn): string
+    {
+
+        if(is_array($fields)){
+
+            foreach ($fields as $field) {
+
+                if (isset($preparedFields)) {
+
+                    $preparedFields = $preparedFields . ", " . $field;
+
+                } else {
+
+                    $preparedFields = $field;
+
+                }
+
+            }
+
+            return $preparedFields;
+
+        } else {
+
+            $preparedFields = ($fields != null) ? $conn->real_escape_string($fields) : null;
+
+            return $preparedFields;
 
         }
     }

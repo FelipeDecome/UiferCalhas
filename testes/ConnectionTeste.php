@@ -11,21 +11,25 @@ use UiferCalhas\SrcClasses\controller\Database\Crud;
 use UiferCalhas\SrcClasses\classes\Exceptions\ConnectionException;
 use UiferCalhas\SrcClasses\classes\Exceptions\CrudException;
 
+$fields = ['cat_name', 'cat_refcode'];
 
+//var_dump($field);
 
 $data = [
-    'cat_name' => 'Conchas',
+    'cat_name' => 'Regadores',
     'cat_segmento' => 'Artesanato',
-    'cat_desc' => 'Conchas',
-    'cat_refcode' => '04'
+    'cat_desc' => 'Regadores',
+    'cat_refcode' => '07'
 ];
 
 try {
 
-    $conn = new Conn(Conf::DB_HOST, Conf::DB_USER, Conf::DB_PASS, Conf::DB_NAME);
-    $conn->set_charset(Conf::DB_CHARSET);
+    //$conn = new Conn(Conf::DB_HOST, Conf::DB_USER, Conf::DB_PASS, Conf::DB_NAME);
+    //$conn->set_charset(Conf::DB_CHARSET);
 
-    $preparedData = Crud::Insert("categorias", $data);
+    $exec = Crud::Delete("categorias", "");
+
+    var_dump($exec);
     
     //$conn->query("INSERT INTO categorias {$preparedData}");
     //$conn->query("UPDATE categorias SET {$preparedData} WHERE cat_id = 2");
