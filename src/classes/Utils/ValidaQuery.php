@@ -11,23 +11,23 @@ class ValidaQuery
 
     public static function prepareData(array $data, int $prepareType, DatabaseConnection $conn): string
     {
+
+        $cleanData = self::clearData($data, $conn);
+
         if ($prepareType === 1) {
 
-            foreach ($data as $field => $value) {
-
-                $escField = $conn->real_escape_string($field);
-                $escValue = $conn->real_escape_string($value);
+            foreach ($cleanData as $field => $value) {
 
                 if (isset($fields) 
                     && isset($value)) {
 
-                    $fields = $fields . ", " . $escField;
-                    $values = $values . ", '" . $escValue . "'";
+                    $fields = $fields . ", " . $field;
+                    $values = $values . ", '" . $value . "'";
 
                 } else {
 
-                    $fields = $escField;
-                    $values = "'" . $escValue . "'";
+                    $fields = $field;
+                    $values = "'" . $value . "'";
 
                 }
 
@@ -37,7 +37,6 @@ class ValidaQuery
             Junta as 2 Váriaveis para serem usadas no comando SQL.
              */
             $prepareData = "({$fields}) VALUES ({$values})";
-            var_dump($values);
 
             /*
             Retorna a String pronta.
@@ -48,16 +47,13 @@ class ValidaQuery
 
             foreach ($data as $field => $value) {
 
-                $escField = $conn->real_escape_string($field);
-                $escValue = $conn->real_escape_string($value);
-
                 if (isset($preparedData)) {
 
-                    $preparedData = $preparedData . ", {$escField} = '{$escValue}'";
+                    $preparedData = $preparedData . ", {$field} = '{$value}'";
 
                 } else {
 
-                    $preparedData = "{$escField} = '{$escValue}'";
+                    $preparedData = "{$field} = '{$value}'";
 
                 }
 
@@ -69,6 +65,7 @@ class ValidaQuery
             return $preparedData;
 
         }
+        
     }
 
     public static function prepareParams(string $params = null, DatabaseConnection $conn)//: string
@@ -108,6 +105,22 @@ class ValidaQuery
             return $preparedFields;
 
         }
+
+    }
+
+    public static function clearData(array $data, DatabaseConnection $conn): array
+    {
+
+        foreach ($data as $field => $value) {
+            
+            $cleanField = strip_tags(trim($conn->real_escape_string($field)));
+            $cleanValue = strip_tags(trim($conn->real_escape_string($value)));
+            $cleanData[$cleanField] = $cleanValue; 
+
+        }
+
+        return $cleanData;
+
     }
 
 }

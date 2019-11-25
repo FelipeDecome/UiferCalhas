@@ -11,27 +11,27 @@ use UiferCalhas\SrcClasses\controller\Database\Crud;
 use UiferCalhas\SrcClasses\classes\Exceptions\ConnectionException;
 use UiferCalhas\SrcClasses\classes\Exceptions\CrudException;
 
+use UiferCalhas\SrcClasses\model\Products\Products;
+
 $fields = ['cat_name', 'cat_refcode'];
 
 //var_dump($field);
 
 $data = [
-    'cat_name' => 'Teste',
+    'cat_name' => 'Regadores',
     'cat_segmento' => 'Artesanato',
-    'cat_desc' => 'Teste',
-    'cat_refcode' => '08'
+    'cat_desc' => 'Regadores',
+    'cat_refcode' => '10'
 ];
+
+$product = new Products();
+var_dump($product);
 
 try {
 
-    $exec = Crud::Select("categorias");
+    $exec = Crud::Update("categorias", $data, "cat_id = 7");
 
     var_dump($exec);
-    
-    //$conn->query("INSERT INTO categorias {$preparedData}");
-    //$conn->query("UPDATE categorias SET {$preparedData} WHERE cat_id = 2");
-
-    //var_dump($preparedData);
 
 } catch (ConnectionException $e) {
 
