@@ -14,8 +14,9 @@ class Products
     private $reference;
     private $qnt_stock;
     private $disp;
+    private $image_url;
 
-    public function __construct(int $id, string $name, string $category, string $desc, string $reference, int $qtd_stock, bool $disp)
+    public function __construct(int $id = null, string $name = null, string $category = null, string $desc = null, string $reference = null, int $qtd_stock = null, bool $disp = null, string $image_url = null)
     {
 
         $this->id = $id;
@@ -25,6 +26,13 @@ class Products
         $this->reference = $reference;
         $this->qtd_stock = $qtd_stock;
         $this->disp = $disp;
+        $this->image_url = $image_url;
+
+    }
+
+    public function __set($var) {
+
+        $this->$var = ""; 
 
     }
 

@@ -31,6 +31,7 @@ class Crud
             throw new CrudException("Houve algum erro com a operação. <b>Erro:</b> {$conn->error}", 21, 'Insert', $query);
 
         }
+        
     }
 
     public static function Select(string $table, $fields = '*', string $params = null)
