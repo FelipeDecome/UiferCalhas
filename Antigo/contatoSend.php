@@ -64,25 +64,24 @@ $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-$mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'mail.destaquedigital.com';             // Specify main and backup SMTP servers
-$mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'contato@uifercalhas.com.br';       // SMTP username
-$mail->Password = 'uifercalhas';                      // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+$mail->isSMTP(); // Set mailer to use SMTP
+$mail->Host = 'mail.destaquedigital.com'; // Specify main and backup SMTP servers
+$mail->SMTPAuth = true; // Enable SMTP authentication
+$mail->Username = 'contato@uifercalhas.com.br'; // SMTP username
+$mail->Password = 'uifercalhas'; // SMTP password
+$mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 587; // TCP port to connect to
 
 $mail->setFrom($data['mail'], $data['name']);
 $mail->addReplyTo($data['mail'], $data['name']);
 
-$mail->addAddress('contato@uifercalhas.com.br', 'uifercalhas');     // Add a recipient
+$mail->addAddress('contato@uifercalhas.com.br', 'uifercalhas'); // Add a recipient
 
-$mail->isHTML(true);                                  // Set email format to HTML
+$mail->isHTML(true); // Set email format to HTML
 
 $mail->Subject = $data['subject'];
 $mail->Body = "<b>Nome:</b>{$data['name']}<br/><b>E-mail:</b>{$data['mail']}<br/><b>Telefone:</b>{$data['tel']}<br/><b>Mensagem:</b>{$data['mensagem']}<br/>";
 //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
 
 if (isset($err) && $err != null) {
     echo "<script>location.href='index.php?send=fail&err=$err#contato';</script>";
@@ -90,6 +89,6 @@ if (isset($err) && $err != null) {
     if ($mail->send()) {
         echo "<script>location.href='index.php?send=success#contato';</script>";
     } else {
-        echo "<script>location.href='index.php?send=fail#contato';</script>"
+        echo "<script>location.href='index.php?send=fail#contato';</script>";
     }
 }
